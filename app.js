@@ -4,7 +4,7 @@ const express = require('express');
 
 const app = express();
 
-const HTTP_PORT = process.env.HTTP_PORT || 8000;
+const HTTP_PORT = 8000;
 http.createServer(app).listen(HTTP_PORT, () => console.log('HTTP server running on port ' + HTTP_PORT ));
 
 app.use(require("body-parser").text());  // node.js body parsing middleware
