@@ -1,0 +1,38 @@
+{
+  "name": "react-express-boilerplate-client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8000",
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "3.2.0",
+    "node-sass-chokidar": "^1.3.5",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/scss/ -o src/css/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/scss/ -o src/css/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
